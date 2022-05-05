@@ -7,16 +7,20 @@
 // ripeti richiesta  fintanto che la somma degli elementi é minore di 50
 
  let list = []
- sum = 50
+ sum = 0
  
  do {
     let numeroInserito = Number(prompt("Inserire numero"));
-    list.push(numeroInserito);
-    sum += list[i];
-   
- }
- while ( i < sum );
- console.log(sum); 
+// correzione
+    if(!isNaN(numeroInserito) ){
+        sum += list; 
+            if(sum < 50){
+                list.push(numeroInserito);
+            }
+        
+    }
+ }while ( sum < 50 )
+ console.log(list); 
 
 
 
